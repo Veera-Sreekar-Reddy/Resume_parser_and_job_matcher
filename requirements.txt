@@ -1,0 +1,9 @@
+streamlit~=1.48.0
+langchain>=0.1.15
+langchain-community>=0.0.24
+chromadb
+pymupdf
+unstructured
+tqdm
+ollama
+docx2txt
