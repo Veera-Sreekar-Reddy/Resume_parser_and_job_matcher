@@ -5,6 +5,7 @@ from matcher import (
     extract_job_skills,
     compute_match_score,
     generate_cover_letter,
+    generate_interview_questions
 )
 
 st.set_page_config(page_title="Resume Analyzer & Job Matcher", layout="centered")
@@ -37,6 +38,7 @@ if st.button("Analyze"):
             job_skills = extract_job_skills(jd_text)
             match_score = compute_match_score(resume_skills, job_skills)
             letter = generate_cover_letter(resume_text, jd_text)
+            interview_questions = generate_interview_questions(resume_text, jd_text)
 
         st.success("Analysis Complete")
         st.markdown(f"### Match Score: **{match_score:.2f}%**")
@@ -49,6 +51,9 @@ if st.button("Analyze"):
 
         st.subheader(" Tailored Cover Letter")
         st.text_area("Generated Cover Letter", letter, height=300)
+
+        st.subheader("Suggested Interview Questions")
+        st.text_area("Generated Questions", interview_questions, height=200)
 
     else:
         st.warning("Please upload or paste both resume and job description.")

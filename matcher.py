@@ -26,6 +26,15 @@ Job Description:
 {job_text}
 """)
 
+question_prompt = PromptTemplate.from_template("""Given the following resume and job description, generate 5 to 10 
+role-specific technical or behavioral interview questions that the candidate should prepare for.
+
+Resume:
+{resume_text}
+
+Job Description:
+{job_text}
+""")
 
 
 def extract_resume_skills(resume_text):
@@ -52,3 +61,8 @@ def generate_cover_letter(resume_text, job_text):
         "resume_text": resume_text,
         "job_text": job_text
     }).strip()
+
+
+def generate_interview_questions(resume_text, job_text):
+    chain = LLMChain(llm=llm, prompt=question_prompt)
+    return chain.run({"resume_text": resume_text, "job_text": job_text})
