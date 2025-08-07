@@ -1,6 +1,6 @@
 # LangChain Resume Analyzer & Job Matcher
 
-A Streamlit-based web application that analyzes resumes against job descriptions using **LangChain**, **local LLMs (via Ollama)**, and **PDF/TXT parsing**. It extracts key skills, computes a match score, generates a personalized cover letter, and suggests potential interview questions.
+A Streamlit-based web application that analyzes resumes against job descriptions using **LangChain**, **local LLMs (via Ollama)** using **Mistral** model, and **PDF/TXT parsing**. It extracts key skills, computes a match score, generates a personalized cover letter, and suggests potential interview questions.
 
 ---
 
