@@ -6,7 +6,7 @@ A Streamlit-based web application that analyzes resumes against job descriptions
 
 ## Features
 
-- Upload **Resume (PDF)** and **Job Description (PDF/TXT)**
+- Upload **Resume (PDF/TXT)** and **Job Description (PDF/TXT)**
 - Extracts skills from both using a **local LLM**
 - Computes a **match percentage** between resume and JD
 - Generates a **tailored cover letter**
@@ -31,7 +31,7 @@ A Streamlit-based web application that analyzes resumes against job descriptions
 
 - pip install -r requirements.txt
 
-### 3. Install and OLLAMA
+### 3. Install and run OLLAMA
 
 - brew install ollama (install ollama)
 - ollama serve
